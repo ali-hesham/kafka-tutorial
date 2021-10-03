@@ -3,7 +3,7 @@ from json import dumps
 from kafka import KafkaProducer
 
 # initialize kafka producer
-producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
+producer = KafkaProducer(bootstrap_servers=['localhost:29092'],
                          value_serializer=lambda x:
                          dumps(x).encode('utf-8'))
 
