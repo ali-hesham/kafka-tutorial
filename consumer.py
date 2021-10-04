@@ -8,3 +8,6 @@ consumer = KafkaConsumer(
     enable_auto_commit=True,  # auto_commit messages when received
     group_id='my-group',  # add consumer to a group to make auto commit
     value_deserializer=lambda x: loads(x.decode('utf-8')))  # message deserialization
+
+for message in consumer:
+    print(message)
