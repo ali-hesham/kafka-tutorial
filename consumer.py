@@ -3,7 +3,7 @@ from json import loads
 
 consumer = KafkaConsumer(
     'test_topic',
-    bootstrap_servers=['localhost:29092'],
+    bootstrap_servers=['localhost:9092'],
     auto_offset_reset='earliest',  # consumer starts reading at the latest committed offset
     enable_auto_commit=True,  # auto_commit messages when received
     group_id='my-group',  # add consumer to a group to make auto commit
